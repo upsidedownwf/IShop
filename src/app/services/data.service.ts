@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor(private http: HttpClient, private url: string) { }
+  
  get Get(){
+  const header:HttpHeaders= new HttpHeaders()
+  header.set("X-Pagination",JSON.stringify({"weight":124, "height":56}))
+  var waso= {headers: header};
     return this.http.get(this.url);
   }
   post(value){

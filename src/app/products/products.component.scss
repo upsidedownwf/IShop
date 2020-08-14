@@ -1,0 +1,10 @@
+$common:dodgerblue;
+
+.common{
+    @extend .btn, .btn-primary !optional;
+    background-color: darken($common, 10%);
+    margin: 0 auto;
+    padding:10px 0px;
+    border-radius:25px;
+    color:#fff;
+}

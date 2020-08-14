@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DataTableModule} from 'angular-4-data-table';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -60,8 +59,7 @@ const config = new AuthServiceConfig(
     HttpClientModule,
     SocialLoginModule,
     FormsModule,
-    ReactiveFormsModule,
-    DataTableModule
+    ReactiveFormsModule
   ],
   providers: [
     {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
-import {DataTableResource} from 'angular-4-data-table';
 
 @Component({
   selector: 'app-adminproducts',
@@ -10,7 +9,6 @@ import {DataTableResource} from 'angular-4-data-table';
 export class AdminproductsComponent implements OnInit {
 product$: any;
 filteredproducts:any;
-tableResource:DataTableResource<any>
   constructor(private data: ProductService) { }
 
   ngOnInit() {
