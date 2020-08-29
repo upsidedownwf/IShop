@@ -13,7 +13,7 @@
     </div>
     <div class="col">
         <div class="row">
-            <ng-container *For="let p of filteredproducts; index as i">
+            <ng-container *ngFor="let p of filteredproducts; index as i">
                 <div class="col-md-6">
                     <productcard [product]="p" [shopping-cart]="cart"></productcard>
                </div>
