@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
 import { ProductformComponent } from './admin/productform/productform.component';
+import { ProductcardComponent } from './productcard/productcard.component';
 
 const config = new AuthServiceConfig(  
   [  
@@ -50,7 +51,8 @@ const config = new AuthServiceConfig(
     AdminproductsComponent,
     AdminordersComponent,
     LoginComponent,
-    ProductformComponent
+    ProductformComponent,
+    ProductcardComponent
   ],
   imports: [
     BrowserModule,

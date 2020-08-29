@@ -8,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 export class SocialloginService extends DataService{
 
   constructor(http: HttpClient) {
-    super(http,"https://localhost:44390/api/sociallogin");
+    super(http,"http://localhost/VehicleApi/api/sociallogin");
   }
 }
