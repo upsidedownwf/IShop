@@ -16,7 +16,7 @@ products: any;
 filteredproducts;
 categories;
 category ;
-cart;
+cart:any;
 sub:Subscription
   constructor(public product: ProductService,public categorys: CategoriesService, public route: ActivatedRoute,
     private shopcart: ShoppingcartserviceService
@@ -34,8 +34,8 @@ sub:Subscription
 
     this.categories= categorys.Get;
   }
-  ngOnInit(): void {
-    this.cart= this.shopcart.getcartid();
+ async ngOnInit() {
+    this.sub=(await this.shopcart.getCart()).subscribe(x=> this.cart=x);
   }
   ngOnDestroy(): void {
     this.sub.unsubscribe();

@@ -16,7 +16,9 @@
         </ng-template>
         
         <li class="nav-item">
-          <a class="nav-link" routerLink="/shopping-cart">Shopping Cart</a>
+          <a class="nav-link" routerLink="/shopping-cart">Shopping Cart
+          <span class="badge badge-warning badge-pill" *ngIf="quantity>0">{{quantity}}</span>
+          </a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
